@@ -1,3 +1,4 @@
 myenv/
 website/__pycache__/
 *.pyc
+instance
