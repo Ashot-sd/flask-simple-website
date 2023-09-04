@@ -26,4 +26,4 @@ jobs:
 
     - name: Test Flask app
       run: |
-        curl http://localhost:80/
+        curl http://localhost:80/login
