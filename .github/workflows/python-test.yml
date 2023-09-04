@@ -22,7 +22,7 @@ jobs:
 
     - name: Run tests on Docker image
       run: |
-        docker run --name flask-app -d -p 80:5000 flask:1
+        docker run --name flask-app -d -p 80:5000 flask-app:1
 
     - name: Test Flask app
       run: |
