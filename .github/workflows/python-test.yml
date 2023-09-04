@@ -18,11 +18,11 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Build Docker image
-      run: docker build --tag flask-app:$(date +%s) .
+      run: docker build --tag flask-app:1 .
 
     - name: Run tests on Docker image
       run: |
-        docker run --name flask-app -d -p 80:5000 flask:$(date +%s)
+        docker run --name flask-app -d -p 80:5000 flask:1
 
     - name: Test Flask app
       run: |
