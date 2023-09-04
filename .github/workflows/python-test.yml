@@ -17,11 +17,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Image tag
-      run: echo "IMAGE_TAG=1" >> $GITHUB_ENV
-
     - name: Build Docker image
-      run: docker build -t flask-app:${{ env.MY_NUMBER }} .
+      run: docker build --tag flask-app:$(date +%s) .
 
     - name: Run tests on Docker image
       run: |
